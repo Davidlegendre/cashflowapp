@@ -1,9 +1,18 @@
+@import "./cssmodules/form.module.css";
+@import "./cssmodules/inputs.module.css";
+@import "./cssmodules/acors.module.css";
+@import "./mensajesglobales/mensaje.module.css";
 :root {
+  --Depth4: 0 1.6px 3.6px 0 rgba(0, 0, 0, .132), 0 .3px .9px 0 rgba(0, 0, 0, .108);
+    --Depth8: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132), 0 .6px 1.8px 0 rgba(0, 0, 0, .108);
+    --Depth16: 0 6.4px 14.4px 0 rgba(0, 0, 0, .132), 0 1.2px 3.6px 0 rgba(0, 0, 0, .108);
+    --Depth64: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22), 0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    font-family: 'Segoe UI Variable Display', Tahoma, Geneva, Verdana, sans-serif !important;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -81,27 +90,64 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /*background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb));*/
+  
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+}
+
+.container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container::after{
+  content: '';
+  position: fixed;
+  bottom: -22px;
+  width: 100%;
+  height: 20px;
+  transform: rotate(180deg);
+  background-color: var(--card-border-rgb);
+  box-shadow: var(--Depth64);
+}
+
+.container::before{
+  content: '';
+  position: fixed;
+  top: -35px;
+  width: 100%;
+  height: 20px;
+  background-color: var(--card-border-rgb);
+  box-shadow: var(--Depth64);
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+@media (max-width: 470px){
+  .container
+  {
+    align-items: normal;
+    padding-top: 20px;
+    height: max-content;
   }
 }

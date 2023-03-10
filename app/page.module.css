@@ -113,8 +113,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75px;
-  height: 75px;
+  width: 170px;
+  height: 170px;
   padding: 25px 10px;
   margin-left: 16px;
   transform: translateZ(0);
@@ -132,7 +132,7 @@
 
 /* Conic Gradient Animation */
 .thirteen::before {
-  animation: 6s rotate linear infinite;
+  animation: 5s rotate linear infinite;
   width: 200%;
   height: 200%;
   background: var(--tile-border);
