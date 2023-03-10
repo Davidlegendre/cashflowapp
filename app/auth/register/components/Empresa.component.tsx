@@ -1,6 +1,6 @@
 
 'use client'
-export default function EmpresaComponent({setValid, valid}){
+export default function EmpresaComponent({setValid, valid}: any){
    
     return (
         <div className="form_campo">

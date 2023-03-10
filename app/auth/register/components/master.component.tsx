@@ -6,7 +6,7 @@ import { FormEvent, useState } from 'react';
 import Mensaje from '@/app/mensajesglobales/mensajes.global';
 import { formsRegistrosType } from '../../../types/registro.validate';
 
-export default function MasterRegister({props}: {props:{}}){
+export default function MasterRegister({props}: {props:any}){
     let time
     const [mensaje, setMensaje] = useState("")
     const [isOpen, setIsOpen] = useState(Boolean)
