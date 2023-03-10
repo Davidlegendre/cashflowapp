@@ -12,7 +12,8 @@ const nextConfig = {
     appDir: true,
   },
   env:{
-    apikey: process.env.APIKEY
+    apikey: process.env.APIKEY,
+    service: process.env.SERVICE
   }
 }
 

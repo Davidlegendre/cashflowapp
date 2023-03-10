@@ -4,7 +4,7 @@ const datos = {
 };
 
 const getGeneros = async () => { 
-    const res = await fetch('http://localhost:4000/genero/all', {
+    const res = await fetch(process.env.service + '/genero/all', {
         headers:{
             "apikey": "Key " + process.env.apikey,
         
@@ -16,7 +16,7 @@ const getGeneros = async () => {
 }
 
 const getTipoidents = async () => { 
-    const res = await fetch('http://localhost:4000/tipo-identificacion/all', {
+    const res = await fetch(process.env.service +'/tipo-identificacion/all', {
         headers:{
             "apikey": "Key " + process.env.apikey,
         
