@@ -33,7 +33,7 @@ export default function Login()
                     <div>
                         <div className="form_buttons">
                             <input type="submit" value="Iniciar Sesion" />
-                            <Link href="/auth/register" type="button" >
+                            <Link href="/auth/register" className="btn" >
                                 Registrarse
                             </Link>
                         </div>

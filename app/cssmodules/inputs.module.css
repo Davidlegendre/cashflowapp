@@ -30,7 +30,7 @@ input[type=number], select{
         border-bottom-color: rgba(var(--card-border-rgb), 0.9);
     }
 
-input[type='button'],button, input[type='submit']
+input[type='button'],button, input[type='submit'], .btn
 {
     border-style: none;
     background: white;
@@ -46,7 +46,7 @@ input[type='button'],button, input[type='submit']
     transition: all ease-in .2s;
 }
 
-input[type='button']:hover,button:hover, input[type='submit']:hover
+input[type='button']:hover,button:hover, input[type='submit']:hover, .btn:hover
 {
     cursor: pointer;
     box-shadow: 0px 2px 8px 0px #0000001a;
@@ -58,7 +58,7 @@ input[type='button']:hover,button:hover, input[type='submit']:hover
 
 
 @media (prefers-color-scheme: dark) {
-    input[type='button'],button, input[type='submit']
+    input[type='button'],button, input[type='submit'], .btn
     {
         background-color: rgb(48, 48, 48);
         color: white;
@@ -71,7 +71,7 @@ input[type='button']:hover,button:hover, input[type='submit']:hover
         background-color: rgb(48, 48, 48);
 
     }
-    input[type='button']:hover,button:hover, input[type='submit']:hover{
+    input[type='button']:hover,button:hover, input[type='submit']:hover, .btn:hover{
         background-color: rgb(53, 53, 53);
          box-shadow: 0px 5px 8px 0px #ffffff1a;
     }
