@@ -5,8 +5,10 @@ import UserComponent from './Users.component';
 import { FormEvent, useState } from 'react';
 import Mensaje from '@/app/mensajesglobales/mensajes.global';
 import { formsRegistrosType } from '../../../types/registro.validate';
+import { useRouter } from 'next/navigation';
 
 export default function MasterRegister({props}: {props:any}){
+    const router = useRouter()
     let time
     const [mensaje, setMensaje] = useState("")
     const [isOpen, setIsOpen] = useState(Boolean)
@@ -51,9 +53,14 @@ export default function MasterRegister({props}: {props:any}){
     }
 
     const back = () => {
-        verificar()
-        if(num > 0)
-            setNum(num - 1)
+        if(num !== 0)
+        {
+            verificar()
+            if(num > 0)
+                setNum(num - 1)
+        }
+        else
+            router.push("/auth")
     }
 
     const Submit = (e: FormEvent) => {
@@ -67,8 +74,8 @@ return(
     <form onSubmit={(e) => Submit(e)}>
         {elements[num]}
         <div className="form_buttons">
-            <input type="submit" onClick={back} value="Atras"/>
-            <input type="submit" onClick={next} value={num === elements.length - 1 ? "Guardar": "Adelante"} />
+            <input type="button" onClick={back} value={num === 0 ? "Login": "Atras"}/>
+            <input type="button" onClick={next} value={num === elements.length - 1 ? "Guardar": "Adelante"} />
         </div>        
     </form>
     <Mensaje isOpen={isOpen} mensaje={mensaje}></Mensaje>

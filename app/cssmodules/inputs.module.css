@@ -3,6 +3,7 @@ input[type=number], select{
     border-style: none;
     border-bottom: solid 3px;
     border-bottom-color: rgba(0,0,0,0.1);
+    border-block-color: rgba(0,0,0,0.1);
     margin-top: 5px;
     padding: 7px;
     background-color: whitesmoke;
@@ -66,7 +67,7 @@ input[type='button']:hover,button:hover, input[type='submit']:hover, .btn:hover
     }
 
     input[type=text], input[type=password], input[type=email], input[type=search], input[type=date], input[type=datetime],
-    input[type=number]{
+    input[type=number], select{
         border-color: rgba(148, 148, 148, 0.281);
         background-color: rgb(48, 48, 48);
 
