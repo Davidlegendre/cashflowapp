@@ -1,4 +1,12 @@
+
+
 import Image from "next/image"
+import Link from "next/link"
+
+export const metadata  = {
+    title: "CashFlow - Login"
+}
+
 export default function Login()
 {
     
@@ -25,7 +33,9 @@ export default function Login()
                     <div>
                         <div className="form_buttons">
                             <input type="submit" value="Iniciar Sesion" />
-                            <input type="button" value="Limpiar" />
+                            <Link href="/auth/register" type="button" >
+                                Registrarse
+                            </Link>
                         </div>
                         <a href="#">Cambiar mi contraseña</a>
                     </div>

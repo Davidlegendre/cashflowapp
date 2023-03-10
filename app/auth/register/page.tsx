@@ -1,8 +1,9 @@
 import Image from "next/image"
 import RegisterComponent from '../server/Register';
 import MasterRegister from "./components/master.component";
-
-
+export const metadata  = {
+    title: "CashFlow - Registrar"
+}
 export default async function Register()
 {
     
