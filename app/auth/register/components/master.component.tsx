@@ -4,7 +4,7 @@ import PersonaComponent from './Persona.component';
 import UserComponent from './Users.component';
 import { FormEvent, useState } from 'react';
 import Mensaje from '@/app/mensajesglobales/mensajes.global';
-import { verificarEmpresa, formsRegistrosType, verificarPersona } from '../../../types/registro.validate';
+import { formsRegistrosType } from '../../../types/registro.validate';
 
 export default function MasterRegister({props}: {props:{}}){
     let time
@@ -12,9 +12,9 @@ export default function MasterRegister({props}: {props:{}}){
     const [isOpen, setIsOpen] = useState(Boolean)
     const [valid, setValid] = useState(formsRegistrosType)
     const elements = [
-        <EmpresaComponent setValid={setValid} valid={valid}></EmpresaComponent>,
-        <PersonaComponent generos={props.generos} tipoIdents={props.tipoidents}></PersonaComponent>,
-        <UserComponent></UserComponent>
+        <EmpresaComponent key={"empresa"} setValid={setValid} valid={valid}></EmpresaComponent>,
+        <PersonaComponent key={"persona"} generos={props.generos} tipoIdents={props.tipoidents}></PersonaComponent>,
+        <UserComponent key={"users"}></UserComponent>
     ]
 
     const verificar = () => {
