@@ -1,5 +1,5 @@
 'use client'
-export default function PersonaComponent({generos, tipoIdents}: {generos: {}, tipoIdents: {}} ){
+export default function PersonaComponent({generos, tipoIdents}: {generos: any, tipoIdents: any} ){
     const itemsgeneros = !generos ? <></> : generos.Data?.map((element: any)=>{
         return <option key={element
         ._id} value={element._id}>{element.descrip}</option>
