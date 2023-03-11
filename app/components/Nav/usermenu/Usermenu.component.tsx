@@ -41,7 +41,7 @@ export default function UserMenu({imguser, username}: {imguser: string, username
                     <p>{username}</p>                   
                 </div>
                 <div className={style.itemsmenu}>
-                    {items.map(e=><Link href={e.href}>{e.title}</Link>)}
+                    {items.map(e=><Link key={e.href} href={e.href}>{e.title}</Link>)}
                     <button className={style.btnclose}>Cerrar Sesion</button>
                 </div>
                
