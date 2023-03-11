@@ -1,0 +1,58 @@
+.usermenu {
+    position: absolute;
+    top: 58px;
+    width: 210px;
+    right: 0;
+    height: 0px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+    background-color: rgba(var(--callout-rgb), 1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.2);
+    box-shadow: var(--Depth16);
+}
+
+.headermenu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.headermenu p{
+    font-size: 14px;
+    
+}
+
+.itemsmenu a{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding:10px 15px;
+    color: rgba(var(--card-border), 1);
+    border-radius: 0px;
+}
+
+.openmenu{
+    display: inline;
+    height: 250px;
+}
+
+.btnclose{
+    width: 95%;
+    margin: 5px;
+}
+
+.itemsmenu{
+    border-top: 1px solid rgba(var(--card-border-rgb), 0.3);
+}
+
+.userbtn{
+    padding: 0px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40.2px;
+    overflow: hidden;
+}
+.content{
+    position: relative;
+}

@@ -4,15 +4,18 @@
     justify-content: center;
     align-items: center;
     padding-left: 10px;
+    width: 100%;
     gap: 50px;
     padding-right: 10px;
     height: 58px;
-    position:sticky;
+    position:sticky;    
     top: 0px;
     background-color: rgba(var(--callout-rgb), 0.5);
     border-bottom: 1px solid rgba(var(--card-border-rgb), 0.2);
     backdrop-filter: blur(15px);
+    
 }
+
 
 .menu {
     display:  flex;
@@ -31,37 +34,33 @@
     display: flex;
     align-items: center;
 }
-.perfil .perfilbtn{
-    height: 38px;
-    border: 1px solid rgba(var(--card-border-rgb), 0.5);
-    overflow: hidden;
-}
-.perfil p{
+.perfil > p{
     font-size: 12px;
-    margin-right: 7px;
-    background-color: brown;
+    margin-right: 5px;
+    background-color: rgb(96, 9, 117);
     color: white;
     font-weight: 700;
     border: 1px solid rgba(var(--card-border-rgb), 0.2);
-    padding: 2px 12px;
+    padding: 2px 7px;
     border-radius: 4px;
 }
-
 .childrens{
     padding-top: 4rem;
 }
 
 .menubtn{
     border-color: transparent;
-    margin-right:-3px;
+    margin-right:-5px;
     background-color: transparent;
     visibility: collapse;
     display: none;
+    overflow: hidden;
 }
 
 .navbar{
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .menu a {
@@ -92,6 +91,10 @@ background-color: rgba(var(--card-border-rgb), 0.14);
 font-weight: 800;
 }
 
+.indicator{
+    display: none;
+}
+
 @media (prefers-color-scheme: dark) {
     .select{
         color: white;
@@ -99,14 +102,20 @@ font-weight: 800;
   }
 
 
+ 
+
 @media (max-width: 720px){
     .menubtn{
         display: inherit;
         visibility: visible;
     }
+    .indicator{
+        display: inline;
+    }
 
     .nav{
         justify-content: space-between;
+        gap: 0px;
     }
 
     .menu {
@@ -120,14 +129,16 @@ font-weight: 800;
         top: 58px;
         height: 0px;
         overflow: hidden;
-        backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(var(--card-border-rgb), 0.2);
         border-radius: 0px;
     }
+    .menu a {
+        justify-content: left;
+        padding: 20px 20px;
+    }
 
     .openmenu{
-        height: 270px;
-        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+        height: max-content;
     }
     .menu *{
         width: 100%;
@@ -136,4 +147,18 @@ font-weight: 800;
         cursor: pointer;
     }
 
+    .select::before
+    {
+        bottom: inherit;
+        left: 7px;
+        width: 4px;
+        height: 40%;
+    }
+
+  }
+
+  @media (max-width: 320px){
+    .indicator{
+        display: none;
+    }
   }

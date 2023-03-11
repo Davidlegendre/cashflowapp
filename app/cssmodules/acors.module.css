@@ -5,7 +5,8 @@ a{
     font-size: 14px;
     padding: 3px;
     border-radius: 4px;
-    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s; 
+     
+    transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;   
 }
 a:hover{
     background-color: rgba(var(--card-border-rgb), 0.14);
