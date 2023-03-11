@@ -14,7 +14,16 @@ const nextConfig = {
   env:{
     apikey: process.env.APIKEY,
     service: process.env.SERVICE
-  }
+  },
+  headers: () => [{
+    source: '/:path*',
+    headers: [
+      {
+        key: 'Cache-Control',
+        value: 'no-store'
+      }
+    ]
+  }]
 }
 
 module.exports = nextConfig
