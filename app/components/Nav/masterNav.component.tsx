@@ -59,7 +59,7 @@ export default function MasterNav({children, styles}: any) {
                     
                     {/*<UserMenu imguser="/favicon.ico" username="David Fernando Legendre Albites"></UserMenu>*/}
                 </div>
-                <button onClick={open} className={styles.menubtn}>=</button>
+                <button onClick={open} className={styles.menubtn}>&#9776;</button>
             </div>
         </div>
             <div className={styles.childrens}>
