@@ -9,7 +9,7 @@ export const metadata  = {
 export default async function Register()
 {
     const image: imageType = {
-        src: "/favicon.ico",
+        src: "/icon.png",
         alt: "Vercel Logo",
         width: 38,
         height: 38

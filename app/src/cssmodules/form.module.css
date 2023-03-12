@@ -5,7 +5,7 @@
     padding: 15px;
     box-shadow: var(--Depth16);
     border: 0px solid rgba(148, 148, 148, 0.4);
-    border-radius: 4px;
+    border-radius: 7px;
     max-width: 570px;
     width: 80%;
     height: max-content;
@@ -30,9 +30,8 @@
     
 }
 
-.form_campo > p{
-    font-size: 18px;
-    font-weight: bold;
+.form_campo > label{
+    margin-bottom: 10px;
 }
 
 .form_campo_row
@@ -48,7 +47,7 @@
 .form_campo *{
     font-size: 14px;
     font-weight:600;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .form_buttons

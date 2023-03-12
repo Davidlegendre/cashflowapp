@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { signOut } from 'next-auth/react'
 import style from "./usermenu.module.css"
 
 const items = [
@@ -30,10 +31,14 @@ export default function UserMenu({imguser, username}: {imguser: string, username
         setOpenMenu(!openmenu)
     }
 
+    const closeSession = async () => {
+       await signOut({callbackUrl: "/"})
+    }
+
     return (
         <div className={style.content}>
             <button onClick={open} className={style.userbtn}>
-                <Image src="/favicon.ico" width={38} height={38} alt="users"></Image>
+                <Image src={imguser} width={38} height={38} alt="users"></Image>
             </button>
             <div className={style.usermenu + (openmenu? " " + style.openmenu : "")}>
                 <div className={style.headermenu}>
@@ -42,7 +47,7 @@ export default function UserMenu({imguser, username}: {imguser: string, username
                 </div>
                 <div className={style.itemsmenu}>
                     {items.map(e=><Link key={e.href} href={e.href}>{e.title}</Link>)}
-                    <button className={style.btnclose}>Cerrar Sesion</button>
+                    <button className={style.btnclose} onClick={closeSession}>Cerrar Sesion</button>
                 </div>
                
             </div>

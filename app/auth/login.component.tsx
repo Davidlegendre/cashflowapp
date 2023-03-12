@@ -7,7 +7,7 @@ import { FormEvent } from 'react';
 export default function LoginComponent() {
     const router = useRouter()
     const image: imageType = {
-        src: "/favicon.ico",
+        src: "/icon.png",
         alt: "Vercel Logo",
         width: 38,
         height: 38

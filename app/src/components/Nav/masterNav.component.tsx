@@ -1,9 +1,12 @@
 'use client'
 
+import Loading from "@/app/loading"
+import { Rol } from "@/app/types/authtypes/rol.obj"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { useState } from "react"
+import { Suspense, useState } from "react"
+import UserMenu from './usermenu/Usermenu.component';
 
 const itemmenu = [
     {
@@ -28,7 +31,8 @@ const itemmenu = [
     }*/
 ]
 
-export default function MasterNav({children, styles}: any) {
+export default function MasterNav({children, styles, person}: any) {
+   
     const [openmenu, setOpenMenu] = useState(false)
     const pathname = usePathname()
     const router = useRouter()
@@ -42,7 +46,7 @@ export default function MasterNav({children, styles}: any) {
         <>
         <div className={styles.nav}>
             <div className={styles.navbar}>
-                <Image src="/favicon.ico"
+                <Image src="/icon.png"
                                 alt="Vercel Logo"
                                 width={38}
                                 height={38}
@@ -53,12 +57,16 @@ export default function MasterNav({children, styles}: any) {
                 </div>
             </div>
             <div className={styles.perfilandbutton}>
-                <div className={styles.perfil}>
-                    <p>Invitado</p>
-                    <button onClick={navigate} className={styles.perfilbtn}>Login</button>
-                    
-                    {/*<UserMenu imguser="/favicon.ico" username="David Fernando Legendre Albites"></UserMenu>*/}
-                </div>
+                 <div className={styles.perfil}>
+                        {person ? <>
+                            <p>{Rol.find(e=>e.code === person.rol)?.descrip}</p>
+                            <UserMenu imguser={person.img} username={person.name + " " + person.apellido}></UserMenu>
+                        </> : 
+                        <>
+                        <p>Invitado</p>
+                        <button onClick={navigate} className={styles.perfilbtn}>Login</button></>
+                        }
+                    </div>
                 <button onClick={open} className={styles.menubtn}>&#9776;</button>
             </div>
         </div>

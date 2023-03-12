@@ -1,15 +1,18 @@
+'use client'
 import './globals.css'
+import {SessionProvider} from 'next-auth/react'
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+  session
+}: any) {
   
   return (
     <html lang="es">
     <head/>    
-    <body>    
-    {children}
+    <body>   
+      <SessionProvider session={session}>
+        {children}
+      </SessionProvider>
       </body>
   </html>
   )
