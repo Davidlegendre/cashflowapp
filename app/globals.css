@@ -1,7 +1,6 @@
-@import "./cssmodules/form.module.css";
-@import "./cssmodules/inputs.module.css";
-@import "./cssmodules/acors.module.css";
-@import "./mensajesglobales/mensaje.module.css";
+@import "./src/cssmodules/form.module.css";
+@import "./src/cssmodules/inputs.module.css";
+@import "./src/cssmodules/acors.module.css";
 :root {
   --Depth4: 0 1.6px 3.6px 0 rgba(0, 0, 0, .132), 0 .3px .9px 0 rgba(0, 0, 0, .108);
     --Depth8: 0 3.2px 7.2px 0 rgba(0, 0, 0, .132), 0 .6px 1.8px 0 rgba(0, 0, 0, .108);
@@ -112,11 +111,7 @@ a {
   text-decoration: none;
 }
 
-.loading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .container{
   height: 100vh;

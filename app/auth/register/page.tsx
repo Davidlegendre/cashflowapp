@@ -1,26 +1,27 @@
-import Image from "next/image"
-import RegisterComponent from '../server/Register';
+import { getGeneros } from "@/app/src/services/generales.service";
 import MasterRegister from "./components/master.component";
+import { getTipoidents } from '../../src/services/generales.service';
+import { imageType } from '../../types/headerform.type';
+import HeaderForm from '../../src/components/Forms/HeaderForm/Headerform.component';
 export const metadata  = {
     title: "CashFlow - Registrar"
 }
 export default async function Register()
 {
-    
-    const {generos, tipoidents} = await RegisterComponent()
+    const image: imageType = {
+        src: "/favicon.ico",
+        alt: "Vercel Logo",
+        width: 38,
+        height: 38
+    }
+    const generos = await getGeneros();
+    const tipoidents = await getTipoidents();
+
     return (
         <div className="container">
                 <div className="formulario">
-                    <div className="header_form">
-                        <Image src="/favicon.ico"
-                            alt="Vercel Logo"
-                            width={38}
-                            height={38}
-                            priority></Image>
-                        
-                        <p>Registrar</p>
-                    </div>
-                   <MasterRegister props={{generos, tipoidents}}></MasterRegister>     
+                    <HeaderForm title="Registro" image={image}/>
+                    <MasterRegister props={{generos, tipoidents}}></MasterRegister>     
                 </div>
             </div>
     )

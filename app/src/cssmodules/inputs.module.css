@@ -5,7 +5,7 @@ input[type=number], select{
     border-bottom-color: rgba(0,0,0,0.1);
     border-block-color: rgba(0,0,0,0.1);
     margin-top: 5px;
-    padding: 7px;
+    padding: 10px;
     background-color: whitesmoke;
     font-size: 14px;
     font-family: var(--font-mono);

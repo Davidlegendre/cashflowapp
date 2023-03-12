@@ -1,7 +1,11 @@
 'use client'
-export default function Error(){
 
-    return (
-        <p>error general</p>
-    )
+import ErrorComponent from "./src/components/Error/Error.component"
+
+export default function Error({
+    error
+  }: {
+    error: Error
+  }){
+    return <ErrorComponent error={error}/>
 }

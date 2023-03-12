@@ -3,11 +3,13 @@ import EmpresaComponent from './Empresa.component';
 import PersonaComponent from './Persona.component';
 import UserComponent from './Users.component';
 import { FormEvent, useState } from 'react';
-import Mensaje from '@/app/mensajesglobales/mensajes.global';
+
 import { formsRegistrosType } from '../../../types/registro.validate';
 import { useRouter } from 'next/navigation';
 
 export default function MasterRegister({props}: {props:any}){
+
+    
     const router = useRouter()
     let time
     const [mensaje, setMensaje] = useState("")
@@ -78,7 +80,6 @@ return(
             <input type="button" onClick={next} value={num === elements.length - 1 ? "Guardar": "Adelante"} />
         </div>        
     </form>
-    <Mensaje isOpen={isOpen} mensaje={mensaje}></Mensaje>
      </>
     )
 }

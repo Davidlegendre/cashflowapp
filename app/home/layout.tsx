@@ -1,7 +1,5 @@
-
-import Footer from "../components/Footer/Footer.component"
-import Nav from "../components/Nav/Nav.component"
-
+import Footer from "../src/components/Footer/Footer.component"
+import Nav from "../src/components/Nav/Nav.component"
 export default function RootLayout({
   children,
 }: {

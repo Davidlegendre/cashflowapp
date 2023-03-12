@@ -72,7 +72,7 @@
     
   }
 
-  @media (max-width: 470px){
+  @media (max-width: 720px){
     .form_campo_row
     {
         flex-direction: column;
