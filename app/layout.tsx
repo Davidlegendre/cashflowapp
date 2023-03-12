@@ -1,10 +1,18 @@
 'use client'
 import './globals.css'
 import {SessionProvider} from 'next-auth/react'
+import { ReactNode } from 'react'
+
+interface IProps
+{
+  children: ReactNode,
+  session: any
+}
+
 export default function RootLayout({
   children,
   session
-}: any) {
+}: IProps) {
   
   return (
     <html lang="es">

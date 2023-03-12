@@ -1,6 +1,5 @@
-import { SignInData } from '@/app/types/authtypes/SignInData.type';
 import { Registro } from '@/app/types/registertypes/registro.type';
-export const signInService = async ({email, password}: SignInData) => {
+export const signInService = async ({email, password}: any) => {
     const result = await fetch(process.env.service + '/auth/login',{
         method: "POST",
         headers:{
