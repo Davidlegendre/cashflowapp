@@ -1,19 +1,23 @@
 export const Rol = [
     {
         code: "D",
-        descrip: "Dueño"
+        descrip: "Dueño",
+        color: "#a4262c"
     },
     {
         code: "A",
-        descrip: "Administrador"
+        descrip: "Administrador",
+        color: "#004b50"
     },
    {
         code: "G",
-        descrip: "Gestor"
+        descrip: "Gestor",
+        color: "#ea4300"
     },
     {
         code: "C",
-        descrip: "Cliente"
+        descrip: "Cliente",
+        color: "#107c10"
     }
     
 ]

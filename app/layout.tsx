@@ -1,27 +1,19 @@
-'use client'
 import './globals.css'
-import {SessionProvider} from 'next-auth/react'
-import { ReactNode } from 'react'
-
-interface IProps
-{
-  children: ReactNode,
-  session: any
-}
+import Providers from './src/components/Providers/Providers.component'
 
 export default function RootLayout({
-  children,
-  session
-}: IProps) {
-  
+  children
+}: {
+  children: React.ReactNode
+}) {
+
+
   return (
     <html lang="es">
     <head/>    
     <body>   
-      <SessionProvider session={session}>
-        {children}
-      </SessionProvider>
-      </body>
+      <Providers>{children}</Providers>
+    </body>
   </html>
   )
 }

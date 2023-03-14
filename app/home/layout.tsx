@@ -1,19 +1,13 @@
-'use client'
-import { useSession } from "next-auth/react"
 import Footer from "../src/components/Footer/Footer.component"
 import Nav from "../src/components/Nav/Nav.component"
-import { User } from "../types/authtypes/User.type"
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const { data }: any = useSession()
-  const person: User | null = data?.user?.persona
+
+
+export default async function RootLayout(props: any) {
+ 
   return (
    <>
-    <Nav person={person}>
-        {children}
+    <Nav>
+        {props.children}
     </Nav>
     <Footer></Footer>
    </>

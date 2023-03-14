@@ -18,6 +18,11 @@
     gap: 10px;
     padding: 10px;
 }
+
+.headermenu img{
+    border-radius: 7px;
+    border: 1px solid rgba(var(--card-border-rgb), 0.6);
+}
 .headermenu p{
     font-size: 14px;
     

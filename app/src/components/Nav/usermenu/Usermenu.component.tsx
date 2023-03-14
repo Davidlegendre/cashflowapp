@@ -38,18 +38,17 @@ export default function UserMenu({imguser, username}: {imguser: string, username
     return (
         <div className={style.content}>
             <button onClick={open} className={style.userbtn}>
-                <Image src={imguser} width={38} height={38} alt="users"></Image>
+                <Image src={imguser} width={38} height={38} alt="users" priority></Image>
             </button>
             <div className={style.usermenu + (openmenu? " " + style.openmenu : "")}>
                 <div className={style.headermenu}>
-                    <Image src={imguser} alt="userimg" width={38} height={38}></Image>
+                    <Image src={imguser} alt="userimg" width={38} height={38} priority></Image>
                     <p>{username}</p>                   
                 </div>
                 <div className={style.itemsmenu}>
                     {items.map(e=><Link key={e.href} href={e.href}>{e.title}</Link>)}
                     <button className={style.btnclose} onClick={closeSession}>Cerrar Sesion</button>
                 </div>
-               
             </div>
         </div>
     )
